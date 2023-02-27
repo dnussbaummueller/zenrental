@@ -78,3 +78,6 @@ end
 
 # Using Devise for user authentication
 gem "devise"
+
+# Using Faker to generate fake data for testing
+gem "faker"
