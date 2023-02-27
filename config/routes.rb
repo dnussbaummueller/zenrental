@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: "pages#home"
+  resources :yoga_studios do
+    resources :bookings, only: [:create, :update]
+  end
+  resources :bookings, only: [:show, :destroy]
 
   ##############################
   # Routes without resources as a reference
@@ -15,7 +20,7 @@ Rails.application.routes.draw do
   # # As a user I can send a booking request for a yoga studio
   # post "yoga_studios/:id/bookings", to: "bookings#create"
   # # As a user I can confirm or reject a booking request for my yoga studio
-  # patch "yoga_studios/:id/bookings/:booking_request_id", to: "bookings#update"
+  # # patch "yoga_studios/:id/bookings/:booking_request_id", to: "bookings#update"
 
   # # As a user I can delete a yoga studio
   # delete "yoga_studios/:id", to: "yoga_studios#destroy"
@@ -29,20 +34,4 @@ Rails.application.routes.draw do
   # get "bookings/:id", to: "bookings#show", as: :booking_request
   # # As a user I can delete a booking request
   # delete "bookings/:id", to: "bookings#destroy"
-
-  # # As a user I can filter the yoga studios on the index page
-  # get "yoga_studios/filter", to: "yoga_studios#filter"
-
-  ##############################
-  # Routes with resources
-  ##############################
-
-  # Define RESTful routes for yoga studios and bookings
-  resources :yoga_studios do
-    resources :bookings, only: [:create, :update]
-  end
-  resources :bookings, only: [:index, :show, :destroy]
-
-  # Add a path helper to generate a URL for filtered yoga studios
-  get "yoga_studios/filter", to: "yoga_studios#index", as: :filtered_yoga_studios
 end
