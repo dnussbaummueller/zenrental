@@ -1,4 +1,4 @@
-class YogaStudioController < ApplicationController
+class YogaStudiosController < ApplicationController
   before_action :set_yoga_studio, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
@@ -6,7 +6,9 @@ class YogaStudioController < ApplicationController
     @yoga_studios = YogaStudio.all
   end
 
-  def show; end
+  def show
+    @booking = Booking.new
+  end
 
   def new
     @yoga_studio = YogaStudio.new
