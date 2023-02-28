@@ -81,3 +81,6 @@ gem "devise"
 
 # Using Faker to generate fake data for testing
 gem "faker"
+
+# Using Cloudinary for photo storage
+gem "cloudinary"
