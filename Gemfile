@@ -78,3 +78,4 @@ end
 
 # Using Devise for user authentication
 gem "devise"
+
