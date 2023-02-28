@@ -1,3 +1,12 @@
+<div class="container">
 <h1>Show the booking details:</h1>
 
+<p><%= @booking.checkin_date %></p>
+<p><%= @booking.checkout_date %></p>
+<p><%= @booking.booking_status %></p>
 
+<p>Name of the yoga studio: <%= @booking.yoga_studio.name %></p>
+<p><%= @booking.yoga_studio.description %></p>
+<p><%= @booking.yoga_studio.address %></p>
+<p><%= @booking.yoga_studio.price_per_hour %>€ per hour</p>
+<p><%= @booking.yoga_studio.size_in_m2 %> m²</p>

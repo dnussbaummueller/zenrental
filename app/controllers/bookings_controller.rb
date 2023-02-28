@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action set_booking, only: [:show, :destroy, :update]
+  before_action :set_booking, only: [:show, :destroy, :update]
 
   def show; end
 
@@ -12,10 +12,11 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.yoga_studio = YogaStudio.find(params[:yoga_studio_id])
+    @booking.booking_status = "pending"
     if @booking.save
       redirect_to booking_path(@booking)
     else
-      render :new
+      redirect_to yoga_studio_path(@booking.yoga_studio)
     end
   end
 
@@ -27,7 +28,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:status)
+    params.require(:booking).permit(:yoga_studio_id, :user_id, :checkin_date, :checkout_date, :booking_status)
   end
 
   def set_booking
