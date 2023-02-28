@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="title-bar my-card mb-3 mt-3">
+    <h1><%= @yoga_studio.name %></h1>
+    <p><i class="fa-solid fa-location-dot"></i> <%= @yoga_studio.address %></p>
+  </div>
+  <%= render 'partials/carousel', yoga_studio: @yoga_studio, class:  %>
+
+
+  <div class="show-content-area d-flex justify-content-between">
+
+    <div class="info-card my-card">
+      <div class="short-details border-bottom pb-2">
+        <p><strong>Size:</strong> <%= @yoga_studio.size_in_m2 %>m²</p>
+        <p><strong>Price:</strong> <%= @yoga_studio.price_per_hour %>€ per hour</p>
+      </div>
+      <p class="info-text mt-3"><%= @yoga_studio.description %></p>
+    </div>
+
+    <div class="booking-card my-card">
+      <p class="border-bottom pb-3"><strong><%= @yoga_studio.price_per_hour.round(2) %>€</strong> per hour</p>
+      <%= render 'partials/booking_form', yoga_studio: @yoga_studio, booking: @booking %>
+    </div>
+
+  </div>
+
+</div>
