@@ -1,4 +1,4 @@
-class BookingController < ApplicationController
+class BookingsController < ApplicationController
   before_action set_booking, only: [:show, :destroy, :update]
 
   def show; end

@@ -1,0 +1,15 @@
+  <%= @yoga_studio.name %>
+  <%# here come the photos %>
+
+  <div class="show-content-area d-flex">
+    <div class="info-card card text-center">
+      <h2></h2>
+      <p><%= @yoga_studio.address %></p>
+      <p><%= @yoga_studio.price_per_hour %></p>
+      <p><%= @yoga_studio.size_in_m2 %></p>
+      <p><%= @yoga_studio.description %></p>
+    </div>
+    <div class="booking-form">
+      <%= render 'bookings/form', yoga_studio: @yoga_studio, booking: @booking %>
+    </div>
+  </div>
