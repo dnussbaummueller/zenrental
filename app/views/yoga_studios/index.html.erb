@@ -1,4 +1,7 @@
+<div class="container">
 <h1>Index page for Yoga Studios</h1>
 <% @yoga_studios.each do |yoga_studio| %>
   <p><%= yoga_studio.name %></p>
 <% end %>
+<%= link_to "Create a new YS",   new_yoga_studio_path %>
+</div>
