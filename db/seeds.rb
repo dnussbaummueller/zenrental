@@ -1,3 +1,5 @@
+require "open-uri"
+
 # Creating the seed data for the database for users, yoga_studios and bookings
 # 1. Create 1 user
 # 2. Create 10 yoga_studios
@@ -28,8 +30,14 @@ puts "Creating yoga_studios..."
     description: Faker::Lorem.paragraph,
     user: User.first
   )
+  3.times do
+    file = URI.open("https://source.unsplash.com/random")
+    yoga_studio.photos.attach(io: file, filename: "#{yoga_studio.name}#{rand(1..100)}.png", content_type: "image/png")
+  end
   yoga_studio.save!
 end
+
+
 
 puts "Finished!"
 

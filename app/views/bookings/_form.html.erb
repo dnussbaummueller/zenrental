@@ -1,9 +1,0 @@
-<h1>Booking form</h1>
-
-<%= simple_form_for [yoga_studio, booking] do |f| %>
-  <%= f.input :checkin_date %>
-  <%= f.input :checkout_date %>
-  <%= f.input :yoga_studio_id, as: :hidden, input_html: { value: @yoga_studio.id } %>
-  <%# f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
-  <%= f.submit %>
-<% end %>
