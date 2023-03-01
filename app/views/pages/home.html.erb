@@ -1,11 +1,10 @@
-<div class="bg-image" >
-<!--hero element-->
-  <div class="px-4 text-center text-white mb-3" style="background-image: url('https://images.unsplash.com/photo-1593810451137-5dc55105dace?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80'); height: 500px; no-repeat center center/cover;">
+  <!--hero element-->
+  <div class="px-4 text-center text-white mb-3" style="background-image: url('https://images.unsplash.com/photo-1593810451137-5dc55105dace?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80'); height: 560px; no-repeat center center/cover;">
       <h1 class="display-5 fw-bold pt-5"><p><p></p></p>Find Your Perfect Practice Space</h1>
       <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">ZenRental connects yoga, meditation, and other holistic practitioners with a wide selection of available studios, making it easier than ever to find the ideal space for your practice. Whether you're a yoga instructor looking to list your studio or a student looking to book one, ZenRental offers unparalleled flexibility and ease of booking, so you can focus on achieving your inner peace and well-being. Join us today and discover your Zen!</p>
+        <p class="lead mb-4">ZenRental connects yoga, meditation, and other holistic practitioners with a wide selection of available studios, making it easier than ever to find the ideal space for your practice. <br><br>Whether you're a yoga instructor looking to list your studio or a student looking to book one, ZenRental offers unparalleled flexibility and ease of booking, so you can focus on achieving your inner peace and well-being. <br><br>Join us today and discover your Zen.</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <%= link_to "Look at Studios",  yoga_studios_path, class: "btn btn-secondary" %>
+            <%= link_to "View Studios",  yoga_studios_path, class: "btn-login" %>
         </div>
       </div>
   </div>
@@ -13,38 +12,35 @@
 <div class="container text-center">
  <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
-    <div class="card h-100 text-bg-light">
+    <div class="card-product shadow-sm rounded-4">
       <%= cl_image_tag @yoga_studios[0].photos.first.key, height: 300, width: 416, crop: :fill %>
       <div class="card-body">
         <h5 class="card-title"><%= @yoga_studios[0].name %></h5>
         <p class="card-text"><%= @yoga_studios[0].description %></p>
-      </div>
-      <div class="card-footer">
-        <%= link_to "Book",  yoga_studio_path(@yoga_studios[0]), class: "btn btn-secondary btn-lg px-4 gap-3" %>
+        <br>
+        <p><%= link_to "Book",  yoga_studio_path(@yoga_studios[0]), class: "btn-login" %></p>
       </div>
     </div>
   </div>
   <div class="col">
-    <div class="card h-100 text-bg-light">
+    <div class="card-product shadow-sm rounded-4">
       <%= cl_image_tag @yoga_studios[1].photos.first.key, height: 300, width: 416, crop: :fill %>
       <div class="card-body">
         <h5 class="card-title"><%= @yoga_studios[1].name %></h5>
         <p class="card-text"><%= @yoga_studios[1].description %></p>
-      </div>
-      <div class="card-footer">
-        <%= link_to "Book",  yoga_studio_path(@yoga_studios[1]), class: "btn btn-secondary btn-lg px-4 gap-3" %>
+        <br>
+        <p><%= link_to "Book",  yoga_studio_path(@yoga_studios[1]), class: "btn-login" %></p>
       </div>
     </div>
   </div>
   <div class="col">
-    <div class="card h-100 text-bg-light">
+    <div class="card-product shadow-sm rounded-4">
       <%= cl_image_tag @yoga_studios[2].photos.first.key, height: 300, width: 416, crop: :fill %>
       <div class="card-body">
         <h5 class="card-title"><%= @yoga_studios[2].name %></h5>
         <p class="card-text"><%= @yoga_studios[2].description %></p>
-      </div>
-      <div class="card-footer">
-        <%= link_to "Book",  yoga_studio_path(@yoga_studios[2]), class: "btn btn-secondary btn-lg px-4 gap-3" %>
+        <br>
+        <p><%= link_to "Book",  yoga_studio_path(@yoga_studios[2]), class: "btn-login" %></p>
       </div>
     </div>
   </div>
