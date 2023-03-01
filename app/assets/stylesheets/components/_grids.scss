@@ -19,6 +19,12 @@
   }
 }
 
+@media (min-width: 576px) {
+  .card-product {
+    grid-template-columns: 1fr;
+  }
+}
+
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .cards {
