@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get "bookings/accept/:id", to: "bookings#accept", as: :accept_booking
   get "bookings/reject/:id", to: "bookings#reject", as: :reject_booking
   ##############################
-  # Routes without resources as a reference
+  # Routes without resources as a reference.
   ##############################
 
   # # As a user I can see all yoga studios

@@ -74,7 +74,7 @@ puts "Creating bookings..."
     user: User.first,
     checkin_date: Faker::Date.between(from: 2.days.ago, to: Date.today),
     checkout_date: Faker::Date.forward(days: 23),
-    booking_status: ["pending", "accepted", "declined"].sample
+    booking_status: ["pending", "accepted", "rejected"].sample
   )
   booking.save!
 end
