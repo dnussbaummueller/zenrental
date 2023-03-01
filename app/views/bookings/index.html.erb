@@ -1,0 +1,28 @@
+<h1>Show all bookings</h1>
+
+<% @bookings.each do |booking| %>
+  <div class="my-card">
+    <% if booking.booking_status == 'pending' %>
+      <p class="booking-status" style="background-color: yellow">BOOKING PENDING</p>
+    <% elsif booking.booking_status == 'accepted' %>
+      <p class="booking-status" style="background-color: green">BOOKING ACCEPTED</p>
+    <% elsif booking.booking_status == 'rejected' %>
+      <p class="booking-status" style="background-color: red">BOOKING REJECTED</p>
+    <% end %>
+  <div class="booking-infos border-bottom pb-3 mb-3">
+    <p><strong>Checkin-Time:</strong> <%= booking.checkin_date %></p>
+    <p><strong>Checkout-Time:</strong>  <%= booking.checkout_date %></p>
+  </div>
+
+  <div class="yoga-studio-infos border-bottom pb-3 mb-3">
+    <p><strong>Name of the yoga studio:</strong>  <%= booking.yoga_studio.name %></p>
+    <p><strong>Description:</strong>  <%= booking.yoga_studio.description %></p>
+    <p><strong>Address:</strong> <%= booking.yoga_studio.address %></p>
+    <p><strong>Price per hour:</strong>  <%= booking.yoga_studio.price_per_hour %>€</p>
+    <p><strong>Size:</strong>  <%= booking.yoga_studio.size_in_m2 %> m²</p>
+  </div>
+  <h4><strong>TOTAL: <%= ((booking.checkout_date - booking.checkin_date)/60/60)*booking.yoga_studio.price_per_hour %>€</strong></h5>
+  <%= link_to "Accept Booking", accept_booking_path(booking), class: "btn btn-primary", style: "background-color: green; border: green;" %>
+  <%= link_to "Reject Booking", reject_booking_path(booking), class: "btn btn-danger" %>
+</div>
+<% end %>
