@@ -21,22 +21,48 @@ User.create!(users_attributes)
 puts "Finished!"
 
 puts "Creating yoga_studios..."
-10.times do
-  yoga_studio = YogaStudio.new(
-    name: Faker::Company.unique.name,
-    address: Faker::Address.unique.full_address,
-    price_per_hour: rand(10..100),
-    size_in_m2: rand(10..100),
-    description: Faker::Lorem.paragraph,
-    user: User.first
-  )
-  3.times do
-    file = URI.open("https://source.unsplash.com/random")
-    yoga_studio.photos.attach(io: file, filename: "#{yoga_studio.name}#{rand(1..100)}.png", content_type: "image/png")
-  end
-  yoga_studio.save!
-end
 
+yoga_studio1 = YogaStudio.new(
+  name: Faker::Company.unique.name,
+  address: "Parkstrasse 90c, 13086 Berlin",
+  price_per_hour: rand(10..100),
+  size_in_m2: rand(10..100),
+  description: Faker::Lorem.paragraph,
+  user: User.first
+)
+3.times do
+  file = URI.open("https://source.unsplash.com/random")
+  yoga_studio1.photos.attach(io: file, filename: "#{yoga_studio1.name}#{rand(1..100)}.png", content_type: "image/png")
+end
+yoga_studio1.save!
+
+yoga_studio2 = YogaStudio.new(
+  name: Faker::Company.unique.name,
+  address: "Chaussee Strasse 92, 10115 Berlin",
+  price_per_hour: rand(10..100),
+  size_in_m2: rand(10..100),
+  description: Faker::Lorem.paragraph,
+  user: User.first
+)
+3.times do
+  file = URI.open("https://source.unsplash.com/random")
+  yoga_studio2.photos.attach(io: file, filename: "#{yoga_studio2.name}#{rand(1..100)}.png", content_type: "image/png")
+end
+yoga_studio2.save!
+
+yoga_studio3 = YogaStudio.new(
+  name: Faker::Company.unique.name,
+  address: "Stockumer Strasse 28, 13507 Berlin",
+  price_per_hour: rand(10..100),
+  size_in_m2: rand(10..100),
+  description: Faker::Lorem.paragraph,
+  user: User.first
+)
+3.times do
+  file = URI.open("https://source.unsplash.com/random")
+  yoga_studio3.photos.attach(io: file, filename: "#{yoga_studio3.name}#{rand(1..100)}.png", content_type: "image/png")
+end
+yoga_studio3.save!
 
 
 puts "Finished!"

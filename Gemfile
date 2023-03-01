@@ -87,3 +87,4 @@ gem "faker"
 
 # Using Cloudinary for photo storage
 gem "cloudinary"
+gem 'geocoder'
