@@ -4,5 +4,6 @@
   <%= ys.input :price_per_hour %>
   <%= ys.input :size_in_m2 %>
   <%= ys.input :description %>
+  <%= ys.input :photos, as: :file, input_html: { multiple: true } %>
   <%= ys.submit %>
 <% end %>
