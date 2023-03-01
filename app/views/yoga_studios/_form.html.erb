@@ -1,8 +1,12 @@
-<%= simple_form_for(@yoga_studio) do |ys| %>
-  <%= ys.input :name %>
-  <%= ys.input :address %>
-  <%= ys.input :price_per_hour %>
-  <%= ys.input :size_in_m2 %>
-  <%= ys.input :description %>
-  <%= ys.submit %>
-<% end %>
+
+<div class="my-card">
+  <%= simple_form_for(@yoga_studio) do |ys| %>
+    <%= ys.input :name %>
+    <%= ys.input :address %>
+    <%= ys.input :price_per_hour %>
+    <%= ys.input :size_in_m2 %>
+    <%= ys.input :description %>
+    <%= ys.input :photos, as: :file, input_html: {multiple: true} %>
+    <%= ys.submit %>
+  <% end %>
+</div>
