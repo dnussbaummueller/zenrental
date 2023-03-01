@@ -39,7 +39,7 @@ class YogaStudiosController < ApplicationController
   private
 
   def yoga_studio_params
-    params.require(:yoga_studio).permit(:name, :address, :description, photos: [])
+    params.require(:yoga_studio).permit(:name, :address, :price_per_hour, :size_in_m2, :description, photos: [])
   end
 
   def set_yoga_studio
