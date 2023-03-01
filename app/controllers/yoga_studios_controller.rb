@@ -4,6 +4,13 @@ class YogaStudiosController < ApplicationController
 
   def index
     @yoga_studios = YogaStudio.all
+    # The `geocoded` scope filters studios with coordinates
+    @markers = @yoga_studios.geocoded.map do |yoga_studio|
+      {
+        lat: yoga_studio.latitude,
+        lng: yoga_studio.longitude
+      }
+    end
   end
 
   def show

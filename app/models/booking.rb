@@ -2,7 +2,7 @@ class Booking < ApplicationRecord
   belongs_to :yoga_studio
   belongs_to :user
 
-  validates :booking_status, presence: true, inclusion: { in: %w[pending accepted declined] }
+  validates :booking_status, presence: true, inclusion: { in: %w[pending accepted rejected] }
   validates :checkin_date, presence: true
   validates :checkout_date, presence: true
   validates :yoga_studio, presence: true

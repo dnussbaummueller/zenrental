@@ -11,4 +11,8 @@ class YogaStudio < ApplicationRecord
   validates :price_per_hour, presence: true
   validates :size_in_m2, presence: true
   validates :description, presence: true
+
+  # map
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
