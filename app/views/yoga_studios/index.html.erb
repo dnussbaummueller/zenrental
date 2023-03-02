@@ -4,7 +4,7 @@
     <% @yoga_studios.each do |yoga_studio| %>
       <div class="card-product shadow-sm rounded-4">
           <%= link_to yoga_studio do %>
-            <%= cl_image_tag yoga_studio.photos[1].key, width: 400, crop: :fill %>
+            <%= cl_image_tag yoga_studio.photos[0].key, width: 400, crop: :fill %>
           <% end%>
           <div class="card-product-infos float-md-start">
             <ul class="list-group list-group-flush p-1">
