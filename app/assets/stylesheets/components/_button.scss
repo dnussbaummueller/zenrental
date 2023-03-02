@@ -67,9 +67,12 @@
   color: white;
 }
 
+.btn-danger {
+  color: white !important;
+}
+
 @media screen and (max-width:997px) {
   .btn .btn-flat .btn-login {
-
     font-size: x-small;
     float: left;
   }
