@@ -1,2 +1,22 @@
-<h2><%= yoga_studio.name %></h2>
-<p><%= yoga_studio.address %></p>
+
+<%# <div class="card-product">
+  <ul >
+    <li class="m-3 p-3 border">
+      <h5></strong></h5>
+    </li>
+    <li>
+
+    </li>
+  </ul>
+</div> %>
+<div class="">
+  <div class="">
+    <div class="">
+      <%= link_to yoga_studio do %>
+        <%= cl_image_tag yoga_studio.photos[0].key, class: "img-map shadow-sm p-3 m-3 bg-white rounded-3" %>
+      <% end%>
+      <h5 class="cards-product-infos text"><strong><%= yoga_studio.name %></h5>
+      <p><%= yoga_studio.address %></p>
+    </div>
+  </div>
+</div>
