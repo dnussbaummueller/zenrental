@@ -9,7 +9,6 @@ static targets = ['expend']
   }
 
   buttonClick(){
-    console.log("Ihave been clicked")
     this.expendClass = this.data.get("show") || "d-none"
     this.expendTarget.classList.toggle(this.expendClass);
 

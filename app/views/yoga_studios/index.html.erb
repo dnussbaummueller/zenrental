@@ -1,7 +1,7 @@
 
 <div class=" d-flex">
   <div class="cards float-end p-1 m-3 flex-grow-1">
-  <%= render "/yoga_studios/filters", yoga_studio: @yoga_studio %>
+  <%= render "/yoga_studios/filters" %>
     <% @yoga_studios.each do |yoga_studio| %>
       <div class="card-product shadow-sm rounded-4">
           <%= link_to yoga_studio do %>
