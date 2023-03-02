@@ -1,7 +1,8 @@
-  <!--hero element-->
-  <div class="px-4 text-center text-white mb-3" style="background-image: url('https://images.unsplash.com/photo-1593810451137-5dc55105dace?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80'); height: 560px; no-repeat center center/cover;">
+<!--hero element-->
+  <div class="hero px-4 text-center mb-3">
       <h1 class="display-5 fw-bold pt-5"><p><p></p></p>Find Your Perfect Practice Space</h1>
       <div class="col-lg-6 mx-auto">
+      <img src="https://images.unsplash.com/photo-1593810451137-5dc55105dace?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80" alt="" style='position: absolute; left: 0px; z-index: -1; top: 0px; height: 850px; width: 100vw;'>
         <p class="lead mb-4">ZenRental connects yoga, meditation, and other holistic practitioners with a wide selection of available studios, making it easier than ever to find the ideal space for your practice. <br><br>Whether you're a yoga instructor looking to list your studio or a student looking to book one, ZenRental offers unparalleled flexibility and ease of booking, so you can focus on achieving your inner peace and well-being. <br><br>Join us today and discover your Zen.</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
             <%= link_to "View Studios",  yoga_studios_path, class: "btn-login" %>
@@ -16,7 +17,8 @@
       <%= cl_image_tag @yoga_studios[0].photos.first.key, height: 300, width: 416, crop: :fill %>
       <div class="card-body">
         <h5 class="card-title"><%= @yoga_studios[0].name %></h5>
-        <p class="card-text"><%= @yoga_studios[0].description %></p>
+        <p class="card-text"><%= @yoga_studios[0].address %></p>
+        <p class="card-text"><%= @yoga_studios[0].size_in_m2 %>m2</p>
         <br>
         <p><%= link_to "Book",  yoga_studio_path(@yoga_studios[0]), class: "btn-login" %></p>
       </div>
@@ -27,7 +29,8 @@
       <%= cl_image_tag @yoga_studios[1].photos.first.key, height: 300, width: 416, crop: :fill %>
       <div class="card-body">
         <h5 class="card-title"><%= @yoga_studios[1].name %></h5>
-        <p class="card-text"><%= @yoga_studios[1].description %></p>
+        <p class="card-text"><%= @yoga_studios[1].address %></p>
+        <p class="card-text"><%= @yoga_studios[1].size_in_m2 %>m2</p>
         <br>
         <p><%= link_to "Book",  yoga_studio_path(@yoga_studios[1]), class: "btn-login" %></p>
       </div>
@@ -38,7 +41,8 @@
       <%= cl_image_tag @yoga_studios[2].photos.first.key, height: 300, width: 416, crop: :fill %>
       <div class="card-body">
         <h5 class="card-title"><%= @yoga_studios[2].name %></h5>
-        <p class="card-text"><%= @yoga_studios[2].description %></p>
+        <p class="card-text"><%= @yoga_studios[2].address %></p>
+        <p class="card-text"><%= @yoga_studios[2].size_in_m2 %>m2</p>
         <br>
         <p><%= link_to "Book",  yoga_studio_path(@yoga_studios[2]), class: "btn-login" %></p>
       </div>
