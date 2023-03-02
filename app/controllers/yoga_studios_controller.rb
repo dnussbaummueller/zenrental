@@ -3,8 +3,12 @@ class YogaStudiosController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @yoga_studios = YogaStudio.all
+    if params[:search][:query].present?
+      @yoga_studios = YogaStudio.search_by_name_and_description(params[:search][:query])
     # The `geocoded` scope filters studios with coordinates
+    else
+      @yoga_studios = YogaStudio.all
+    end
     @markers = @yoga_studios.geocoded.map do |yoga_studio|
       {
         lat: yoga_studio.latitude,
