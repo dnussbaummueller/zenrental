@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_01_122312) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_02_100308) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,6 +54,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_122312) do
     t.index ["yoga_studio_id"], name: "index_bookings_on_yoga_studio_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.bigint "yoga_studio_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "rating"
+    t.index ["yoga_studio_id"], name: "index_reviews_on_yoga_studio_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -84,5 +93,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_122312) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookings", "users"
   add_foreign_key "bookings", "yoga_studios"
+  add_foreign_key "reviews", "yoga_studios"
   add_foreign_key "yoga_studios", "users"
 end
