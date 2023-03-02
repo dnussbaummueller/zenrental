@@ -1,4 +1,4 @@
-<div id="carouselExampleIndicators" class="carousel bs-slide" data-bs-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel bs-slide mt-3" data-bs-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
@@ -7,7 +7,7 @@
   <div class="carousel-inner">
 
     <div class="carousel-item active">
-        <%= cl_image_tag yoga_studio.photos.first.key, height: 300, width: 400, crop: :fill, class: "d-block w-100" %>
+        <%= cl_image_tag yoga_studio.photos.first.key, class: "d-block w-100" %>
       </div>
 
     <% yoga_studio.photos.drop(1).each do |photo| %>

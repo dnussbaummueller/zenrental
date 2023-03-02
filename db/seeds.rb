@@ -79,4 +79,18 @@ puts "Creating bookings..."
   booking.save!
 end
 
+puts "Creating ratings..."
+
+
+YogaStudio.all.each do |yoga_studio|
+  5.times do
+  review = Review.new(
+    yoga_studio: yoga_studio,
+    content: Faker::Quote.unique.yoda,
+    rating: rand(1..5)
+  )
+  review.save!
+  end
+end
+
 puts "Finished!"
