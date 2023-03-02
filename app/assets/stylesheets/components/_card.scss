@@ -58,7 +58,7 @@
 }
 .card-product-infos li{
   background: white ;
-  color: rgb(62, 62, 62);
+  color: $first-color;
 }
 .card-product img {
   height: 100%;
@@ -91,3 +91,5 @@
     float: left;
   }
 }
+
+

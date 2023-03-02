@@ -13,32 +13,43 @@
 }
 
 .btn-flat {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 20px;
-  background:none;
-  border: solid white 1px;
-  transition: background 0.3s ease;
+  color: $first-color !important;
+  padding: 8px 24px !important;
+  border-radius: 20px !important;
+  background:none !important;
+  border: solid $first-color 1px !important;
+  transition: background 0.3s ease !important;
+  font-family:$body-font !important;
+  font-size:small !important;
 }
+.btn-font{
+  font-family:$body-font;
+  font-size:small;
+ }
 
 .btn-login {
-  color: $first-color;
+  color:white;
   padding: 8px 30px;
-  margin: px;
+  margin: 1px;
   border-radius: 20px;
-  background:white;
-  border: solid  $first-color 1px;
+  background: none;
+  border: solid white 1px;
   transition: background 0.3s ease;
+  font-family:$body-font;
+  font-size:small;
 }
 
 .btn-flat:hover {
-  background: #373737;
-  color: white;
+  background: $third-color !important;
+  color: white !important;
+  border: none !important;
 }
 
 .btn-login:hover {
-  background: #373737;
-  color: white;
+  background:$first-color;
+  color:$fourth-color;
+  border: none;
+  box-shadow: 1cap;
 }
 
 .btn-gradient {

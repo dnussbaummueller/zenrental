@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: $fourth-color;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,6 +12,10 @@
 }
 
 .navbar-font{
-  font-family:'Anton', sans-serif;
+  font-family:$headers-font;
   font-size: large;
+}
+
+.navbar-font-color{
+  color: white;
 }

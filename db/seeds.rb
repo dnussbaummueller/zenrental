@@ -64,7 +64,6 @@ yoga_studio3 = YogaStudio.new(
 end
 yoga_studio3.save!
 
-
 puts "Finished!"
 
 puts "Creating bookings..."
