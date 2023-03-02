@@ -1,11 +1,15 @@
-<div class="my-card">
+<div class="form-control bg-white m-5 p-5 rounded-4 border-0 shadow-sm">
   <%= simple_form_for(@yoga_studio) do |ys| %>
+    <strong><h3 class="mb-4">Create a yoga studio</h3></strong>
     <%= ys.input :name %>
     <%= ys.input :address %>
     <%= ys.input :price_per_hour %>
     <%= ys.input :size_in_m2 %>
     <%= ys.input :description %>
     <%= ys.input :photos, as: :file, input_html: {multiple: true} %>
-    <%= ys.submit %>
+    <div class="d-flex justify-content-between">
+      <%= ys.submit class:"btn-flat m-3 ml-0 " %>
+      <%= link_to "Back to all studios",  yoga_studios_path, class:"btn-flat m-3 mr-0 text-decoration-none" %>
+    </div>
   <% end %>
 </div>

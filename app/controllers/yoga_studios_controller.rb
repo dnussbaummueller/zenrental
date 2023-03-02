@@ -8,7 +8,8 @@ class YogaStudiosController < ApplicationController
     @markers = @yoga_studios.geocoded.map do |yoga_studio|
       {
         lat: yoga_studio.latitude,
-        lng: yoga_studio.longitude
+        lng: yoga_studio.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {yoga_studio: yoga_studio})
       }
     end
   end

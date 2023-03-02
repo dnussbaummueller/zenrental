@@ -15,21 +15,21 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-   <div class="navbar navbar-font p-3 mb-0 border-bottom navbar-expand-sm bg-body-tertiary navbar-lewagon">
+  <body class="">
+  <div class="navbar navbar-font p-3 mb-0 navbar-expand-sm navbar-lewagon">
   <div class="container-fluid">
   <div class='d-flex flex-row align-items-center'>
      <%= link_to root_path, class: "navbar-brand" do %>
        <%= image_tag "pngwing.com.png" %>
      <% end %>
-     <div class="text-dark-emphasis">Zen Rental</div>
+     <div class="navbar-font-color">Zen Rental</div>
   </div>
   <%= simple_form_for :search, url: root_path, method: :get do |f| %>
   <div class="search-form-control  form-group">
     <button name="button" type="submit" class="btn">
       <i class="fas fa-search d-flex justify-content-center"></i>
     </button>
-    <input class="form-control string required shadow-sm border rounded-pill"  placeholder="Search for yoga studios" type="text" name="search[query]" id="search_query" />
+    <input class="form-control string required shadow-sm pl-5  rounded-pill search-font"  placeholder="Search for yoga studios" type="text" name="search[query]" id="search_query" />
   </div>
   <% end %>
 
@@ -57,7 +57,7 @@
     </div>
   </div>
  </div>
-  <div class="container-lg p-0 bg-body-tertiary">
+  <div class="container-lg ">
 
 
     <%= yield %>
@@ -67,11 +67,11 @@
 
  </div>
   </div>
-  <div class="footer bg-dark-subtle text-emphasis-dark ">
+  <div class="footer text-emphasis-dark ">
   <div class="footer-copyright d-flex flex-column justify-content-center m-1 p-2">
     <strong class="mb-2">More of Zen Rental</strong>
     <a class="text-decoration-none text-reset" href="#">Contact us</a>
-    <a class="text-decoration-none text-reset " href="#">About us</a>
+    <a class="text-decoration-none text-reset" href="#">About us</a>
   </div>
 
   <div class="footer-links">
