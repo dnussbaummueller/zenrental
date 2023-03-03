@@ -13,11 +13,11 @@
 }
 
 .btn-flat {
-  color: $third-color !important;
+  color: white !important;
   padding: 8px 24px !important;
   border-radius: 20px !important;
-  background:none !important;
-  border: solid $third-color 1px !important;
+  background:$third-color !important;
+  border: none !important;
   transition: background 0.3s ease !important;
   font-family:$body-font !important;
   font-size:small !important;
@@ -40,9 +40,9 @@
 }
 
 .btn-flat:hover {
-  background: $third-color !important;
-  color: white !important;
-  border: none !important;
+  background:none !important;
+  color:$third-color !important;
+  border: solid 1px $third-color !important;
 }
 
 .btn-login:hover {
@@ -71,9 +71,80 @@
   color: white !important;
 }
 
+.btn-edit{
+  color: white !important;
+  padding: 8px 24px !important;
+  border-radius: 20px !important;
+  background:$sixth-color !important;
+  border: none !important;
+  transition: background 0.3s ease !important;
+  font-family:$body-font !important;
+  font-size:small !important;
+}
+
+.btn-edit:hover {
+  background:none !important;
+  color:$sixth-color !important;
+  border: solid 1px $sixth-color !important;
+}
+
+.btn-delete{
+  color: white !important;
+  padding: 8px 24px !important;
+  border-radius: 20px !important;
+  background:$fifth-color !important;
+  border: none !important;
+  transition: background 0.3s ease !important;
+  font-family:$body-font !important;
+  font-size:small !important;
+}
+
+.btn-delete:hover {
+  background:none !important;
+  color:$fifth-color !important;
+  border: solid 1px $fifth-color !important;
+}
+
+.btn-accept{
+  color: white !important;
+  padding: 8px 24px !important;
+  border-radius: 20px !important;
+  background:$seventh-color !important;
+  border: none !important;
+  transition: background 0.3s ease !important;
+  font-family:$body-font !important;
+  font-size:small !important;
+}
+
+.btn-accept:hover {
+  background:none !important;
+  color:$seventh-color !important;
+  border: solid 1px $seventh-color !important;
+}
+
 @media screen and (max-width:997px) {
   .btn .btn-flat .btn-login {
     font-size: x-small;
     float: left;
   }
+}
+
+.home-btn {
+	background-color:#dbe6c4;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#757d6f;
+	font-size:18px;
+	font-weight:bold;
+	padding:12px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ced9bf;
+}
+.home-btn:hover {
+	background-color:#9ba892;
+}
+.home-btn:active {
+	position:relative;
+	top:1px;
 }
