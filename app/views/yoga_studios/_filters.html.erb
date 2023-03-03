@@ -1,4 +1,4 @@
-<div data-controller="button">
+<div data-controller="button" class="filter-block">
   <p>
     <button class="btn btn-primary" data-action="click->button#buttonClick" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
       Filter options
@@ -7,6 +7,7 @@
   <div class="collapse" id="collapseExample" data-button-target="expend">
     <form action="post">
       <div class="filter_items">
+
         <div class="filter_item">
           <p  class="filter_title">Price range</p>
           <div class="price_input" data-role="rangeslider">
@@ -28,7 +29,9 @@
             <input type="range" class="range-max" min="10" max="200" value="150">
           </div>
         </div>
-      <%#   <div class="filter_item">
+
+        <div class="filter_item">
+          <p  class="filter_title">Square range</p>
           <div class="price_input" data-role="rangeslider">
             <div class="field">
               <span>Min</span>
@@ -43,7 +46,12 @@
           <div class="slider">
             <div class="progress"></div>
           </div>
-        </div> %>
+          <div class="range_input">
+            <input type="range" class="range-min" min="10" max="200" value="50">
+            <input type="range" class="range-max" min="10" max="200" value="150">
+          </div>
+        </div>
+
       </div>
     </form>
   </div>

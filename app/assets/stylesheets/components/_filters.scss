@@ -1,4 +1,6 @@
-
+.filter-block {
+  display: none;
+}
 .filter_items {
   background-color: #CED4DA !important;
   display: flex;
@@ -64,6 +66,9 @@ right: 25%;
 position: absolute;
 border-radius: 5px;
 background: #3672cc;
+}
+.range_input{
+  position: relative;
 }
 .range_input input {
   position: absolute;
