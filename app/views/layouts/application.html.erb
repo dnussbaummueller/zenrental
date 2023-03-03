@@ -16,6 +16,7 @@
   </head>
 
   <body class="">
+  <% unless current_page?(root_path) %>
   <div class="navbar navbar-font p-3 mb-0 navbar-expand-sm navbar-lewagon">
   <div class="container-fluid">
   <div class='d-flex flex-row align-items-center'>
@@ -57,6 +58,7 @@
     </div>
   </div>
  </div>
+  <% end %>
   <div class="container-lg ">
 
 
