@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   # Allowing the owner of a yoga studio to accept or reject a booking
   get "bookings/accept/:id", to: "bookings#accept", as: :accept_booking
   get "bookings/reject/:id", to: "bookings#reject", as: :reject_booking
+
+  # Creating a admin dashboard for the yoga studio owners
+  get "admin", to: "yoga_studios#admin", as: :admin
 end

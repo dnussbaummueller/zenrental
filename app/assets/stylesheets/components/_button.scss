@@ -13,11 +13,11 @@
 }
 
 .btn-flat {
-  color: $first-color !important;
+  color: white !important;
   padding: 8px 24px !important;
   border-radius: 20px !important;
-  background:none !important;
-  border: solid $first-color 1px !important;
+  background:$third-color !important;
+  border: none !important;
   transition: background 0.3s ease !important;
   font-family:$body-font !important;
   font-size:small !important;
@@ -28,25 +28,25 @@
  }
 
 .btn-login {
-  color:white;
+  color: white;
   padding: 8px 30px;
   margin: 1px;
   border-radius: 20px;
   background: none;
-  border: solid white 1px;
+  border: solid  white 1px;
   transition: background 0.3s ease;
   font-family:$body-font;
   font-size:small;
 }
 
 .btn-flat:hover {
-  background: $third-color !important;
-  color: white !important;
-  border: none !important;
+  background:none !important;
+  color:$third-color !important;
+  border: solid 1px $third-color !important;
 }
 
 .btn-login:hover {
-  background:$first-color;
+  background:$third-color;
   color:$fourth-color;
   border: none;
   box-shadow: 1cap;
@@ -69,6 +69,57 @@
 
 .btn-danger {
   color: white !important;
+}
+
+.btn-edit{
+  color: white !important;
+  padding: 8px 24px !important;
+  border-radius: 20px !important;
+  background:$sixth-color !important;
+  border: none !important;
+  transition: background 0.3s ease !important;
+  font-family:$body-font !important;
+  font-size:small !important;
+}
+
+.btn-edit:hover {
+  background:none !important;
+  color:$sixth-color !important;
+  border: solid 1px $sixth-color !important;
+}
+
+.btn-delete{
+  color: white !important;
+  padding: 8px 24px !important;
+  border-radius: 20px !important;
+  background:$fifth-color !important;
+  border: none !important;
+  transition: background 0.3s ease !important;
+  font-family:$body-font !important;
+  font-size:small !important;
+}
+
+.btn-delete:hover {
+  background:none !important;
+  color:$fifth-color !important;
+  border: solid 1px $fifth-color !important;
+}
+
+.btn-accept{
+  color: white !important;
+  padding: 8px 24px !important;
+  border-radius: 20px !important;
+  background:$seventh-color !important;
+  border: none !important;
+  transition: background 0.3s ease !important;
+  font-family:$body-font !important;
+  font-size:small !important;
+}
+
+.btn-accept:hover {
+  background:none !important;
+  color:$seventh-color !important;
+  border: solid 1px $seventh-color !important;
 }
 
 @media screen and (max-width:997px) {

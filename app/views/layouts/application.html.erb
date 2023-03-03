@@ -17,7 +17,7 @@
 
   <body class="">
   <% unless current_page?(root_path) %>
-  <div class="navbar navbar-font p-3 mb-0 navbar-expand-sm navbar-lewagon">
+  <div class="navbar navbar-font p-3  navbar-expand-sm navbar-lewagon ">
   <div class="container-fluid">
   <div class='d-flex flex-row align-items-center'>
      <%= link_to root_path, class: "navbar-brand" do %>
@@ -40,15 +40,18 @@
           <li class="nav-item active">
             <%= link_to "", "#", class: "nav-link" %>
           </li>
-          <li class="nav-item text-dark-emphasis">
-            <%= link_to "All Bookings", bookings_path, class: "text-decoration-none m-1 btn-login" %>
-          </li>
-          <li class="nav-item text-dark-emphasis">
-            <%= link_to "New Studio", new_yoga_studio_path, class: "text-decoration-none m-1 btn-login" %>
-          </li>
-          <li class="nav-item text-dark-emphasis">
-            <%= link_to "Login", new_yoga_studio_path, class: "text-decoration-none m-1 btn-login" %>
-          </li>
+          <% if user_signed_in? %>
+            <li class="nav-item text-dark-emphasis">
+              <%= link_to "All Bookings", bookings_path, class: "text-decoration-none m-1 btn-login" %>
+            </li>
+            <li class="nav-item text-dark-emphasis">
+              <%= link_to "Admin", admin_path, class: "text-decoration-none m-1 btn-login" %>
+            </li>
+          <% else %>
+            <li class="nav-item text-dark-emphasis">
+              <%= link_to "Login", new_yoga_studio_path, class: "text-decoration-none m-1 btn-login" %>
+            </li>
+          <% end %>
         <%# else %>
           <!--li class="nav-item"-->
             <%#= link_to "Login", new_user_session_path, class: "nav-link" %>

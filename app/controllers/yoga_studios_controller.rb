@@ -16,6 +16,7 @@ class YogaStudiosController < ApplicationController
 
   def show
     @booking = Booking.new
+    @review = Review.new
   end
 
   def new
@@ -41,7 +42,11 @@ class YogaStudiosController < ApplicationController
 
   def destroy
     @yoga_studio.destroy
-    redirect_to yoga_studios_path
+    redirect_to admin_path
+  end
+
+  def admin
+    @yoga_studios = YogaStudio.where(user: current_user)
   end
 
   private

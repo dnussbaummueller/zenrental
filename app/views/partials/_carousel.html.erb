@@ -12,7 +12,7 @@
 
     <% yoga_studio.photos.drop(1).each do |photo| %>
       <div class="carousel-item">
-        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class: "d-block w-100" %>
+        <%= cl_image_tag photo.key, class: "d-block w-100" %>
       </div>
     <% end %>
 

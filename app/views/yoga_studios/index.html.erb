@@ -1,27 +1,34 @@
-
-<div class=" d-flex">
-  <div class="cards float-end p-1 m-3 flex-grow-1">
-    <% @yoga_studios.each do |yoga_studio| %>
-      <div class="card-product shadow-sm rounded-4">
-          <%= link_to yoga_studio do %>
-            <%= cl_image_tag yoga_studio.photos[0].key, width: 400, crop: :fill %>
-          <% end%>
-          <div class="card-product-infos float-md-start">
-            <ul class="list-group list-group-flush p-1">
-              <li class="list-group-item p-1"> <strong><%= yoga_studio.name %></strong></li>
-              <li class="list-group-item p-1">Price: <strong><%= yoga_studio.price_per_hour %> </strong> <i class="fa-solid fa-euro-sign"></i></li>
-              <li class="list-group-item p-1"><i class="fa-solid fa-location-dot"></i> Studio address <strong> <br> <%= yoga_studio.address %> </strong></li>
-            </ul>
-          </div>
+<div class="container d-flex flex-direction-column space-between-around">
+    <div class="col">
+      <div class=" d-flex" id="padding">
+        <div class="cards float-end p-1 m-3 flex-grow-1">
+          <% @yoga_studios.each do |yoga_studio| %>
+            <div class="card-product shadow-sm rounded-4">
+                <%= link_to yoga_studio do %>
+                  <%= cl_image_tag yoga_studio.photos[0].key, width:400,height:400, crop: :fill %>
+                <% end%>
+                <div class="card-product-infos float-md-start">
+                  <ul class="list-group list-group-flush p-1">
+                    <li class="list-group-item p-1"> <strong><%= yoga_studio.name %></strong></li>
+                    <li class="list-group-item p-1">Price: <strong><%= yoga_studio.price_per_hour %> </strong> <i class="fa-solid fa-euro-sign"></i></li>
+                    <li class="list-group-item p-1"><i class="fa-solid fa-location-dot"></i> Studio address <strong> <br> <%= yoga_studio.address %> </strong></li>
+                  </ul>
+                </div>
+            </div>
+          <% end %>
+        </div>
       </div>
-    <% end %>
+    </div>
+    <div class="col m-5">
+       <div style="width: 50%; height:70%; padding: 5px; rounded-2; margin: 20px; position:fixed; top:85px; right: 20px; bottom:32px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+     </div>
+
+    </div>
   </div>
+
   <%# <div class="float-md-start p-3 ">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.4666948553677!2d13.389248415939289!3d52.50689267981178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851d150f75b59%3A0x79345cc8e68056cc!2sLe%20Wagon%20Berlin%20-%20Coding%20Bootcamp!5e0!3m2!1sen!2sde!4v1677530935915!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div> %>
-
-  <div style="width: 50%; height: 600px; padding: 2px; merging: 2px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-  </div>
