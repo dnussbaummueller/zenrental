@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-between align-items-center">
+  <h1 class="py-3">Admin dashboard</h1>
+  <%= link_to "New Studio", new_yoga_studio_path, class: "text-decoration-none m-1 btn-flat w-25 text-center" %>
+</div>
+
+<% @yoga_studios.each do |yoga_studio| %>
+  <div class="my-card d-flex justify-content-between align-items-center">
+    <%= yoga_studio.name %>
+    <div class="edit-buttons">
+      <%= link_to "Edit", edit_yoga_studio_path(yoga_studio), class: "btn btn-warning" %>
+      <%= render "yoga_studios/destroy", yoga_studio: yoga_studio %>
+    </div>
+  </div>
+<% end %>

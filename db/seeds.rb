@@ -11,13 +11,22 @@ YogaStudio.destroy_all
 User.destroy_all
 
 puts "Creating users..."
-users_attributes = [
+owner_attributes = [
   {
-    email: "test@test.com",
+    email: "owner@zenrental.com",
     password: "123456"
   }
 ]
-User.create!(users_attributes)
+User.create!(owner_attributes)
+
+user_attributes = [
+  {
+    email: "user@zenrental.com",
+    password: "123456"
+  }
+]
+User.create!(user_attributes)
+
 puts "Finished!"
 
 puts "Creating yoga_studios..."
@@ -238,7 +247,7 @@ puts "Creating ratings..."
 
 
 YogaStudio.all.each do |yoga_studio|
-  5.times do
+  3.times do
   review = Review.new(
     yoga_studio: yoga_studio,
     content: Faker::Quote.unique.yoda,
