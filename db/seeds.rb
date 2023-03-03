@@ -44,13 +44,13 @@ yoga_studio1 = YogaStudio.new(
 )
 
 file = URI.open("https://www.praguemorning.cz/wp-content/uploads/2020/02/Screenshot-2020-02-17-at-13.43.16.png")
-  yoga_studio1.photos.attach(io: file, filename: "#{yoga_studio1.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio1.photos.attach(io: file, filename: "#{yoga_studio1.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://www.meatspace.cz/site/assets/files/5950/namastery-meatspace-_gl.jpg")
-  yoga_studio1.photos.attach(io: file, filename: "#{yoga_studio1.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio1.photos.attach(io: file, filename: "#{yoga_studio1.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("http://www.detoxchutne.cz/wp-content/uploads/2016/09/namastery-studio-01.jpg")
-  yoga_studio1.photos.attach(io: file, filename: "#{yoga_studio1.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio1.photos.attach(io: file, filename: "#{yoga_studio1.name}#{rand(1..100)}.png", content_type: "image/png")
 
-  yoga_studio1.save!
+yoga_studio1.save!
 
 yoga_studio2 = YogaStudio.new(
   name: "Hot Yoga Berlin",
@@ -64,11 +64,11 @@ yoga_studio2 = YogaStudio.new(
 )
 
 file = URI.open("https://luxurylondon.co.uk/wp-content/uploads/2022/08/bamford-yoga-studio-london.jpg")
-  yoga_studio2.photos.attach(io: file, filename: "#{yoga_studio2.name}#{rand(1..100)}.png", content_type: "image/png")
-  file = URI.open("https://luxurylondon.co.uk/wp-content/uploads/2022/08/xl-hd-29-1465x1099-c-center.jpg")
-  yoga_studio2.photos.attach(io: file, filename: "#{yoga_studio2.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio2.photos.attach(io: file, filename: "#{yoga_studio2.name}#{rand(1..100)}.png", content_type: "image/png")
+file = URI.open("https://luxurylondon.co.uk/wp-content/uploads/2022/08/xl-hd-29-1465x1099-c-center.jpg")
+yoga_studio2.photos.attach(io: file, filename: "#{yoga_studio2.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://images.squarespace-cdn.com/content/v1/589de1e1f7e0ab05b686adbe/1612882990743-G4CUF7PVOLRLN15GANWN/20_12_02_Bamford_Capture_0135.jpg")
-  yoga_studio2.photos.attach(io: file, filename: "#{yoga_studio2.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio2.photos.attach(io: file, filename: "#{yoga_studio2.name}#{rand(1..100)}.png", content_type: "image/png")
 
 yoga_studio2.save!
 
@@ -84,11 +84,11 @@ yoga_studio3 = YogaStudio.new(
 )
 
 file = URI.open("https://media.tatler.com/photos/6141da906f84b7629deaadfa/16:9/w_1280,c_limit/mortimer-house.jpg")
-  yoga_studio3.photos.attach(io: file, filename: "#{yoga_studio3.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio3.photos.attach(io: file, filename: "#{yoga_studio3.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://www.mortimerhouse.com/propeller/uploads/sites/3/2021/07/fullsizeoutput_4516-1400x788.jpeg")
-  yoga_studio3.photos.attach(io: file, filename: "#{yoga_studio3.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio3.photos.attach(io: file, filename: "#{yoga_studio3.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://www.mortimerhouse.com/propeller/uploads/sites/3/2021/07/photo0086-scaled.jpg")
-  yoga_studio3.photos.attach(io: file, filename: "#{yoga_studio3.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio3.photos.attach(io: file, filename: "#{yoga_studio3.name}#{rand(1..100)}.png", content_type: "image/png")
 
 yoga_studio3.save!
 
@@ -103,11 +103,11 @@ yoga_studio4 = YogaStudio.new(
 )
 
 file = URI.open("https://images.lifestyleasia.com/wp-content/uploads/sites/2/2020/09/23104002/Flowga_Home-Page-1600x900.jpg")
-  yoga_studio4.photos.attach(io: file, filename: "#{yoga_studio4.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio4.photos.attach(io: file, filename: "#{yoga_studio4.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://images.squarespace-cdn.com/content/v1/5d82d3eb84358e0d7028b4ed/1586833292315-T9DHC9Q41N6TKNZW8BCV/1+copy.jpeg")
-  yoga_studio4.photos.attach(io: file, filename: "#{yoga_studio4.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio4.photos.attach(io: file, filename: "#{yoga_studio4.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://images.squarespace-cdn.com/content/v1/5d82d3eb84358e0d7028b4ed/1586833386422-K99W1I766Y43DZFU557R/IMG_6040+copy.jpg")
-  yoga_studio4.photos.attach(io: file, filename: "#{yoga_studio4.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio4.photos.attach(io: file, filename: "#{yoga_studio4.name}#{rand(1..100)}.png", content_type: "image/png")
 
 yoga_studio4.save!
 
@@ -123,11 +123,11 @@ yoga_studio5 = YogaStudio.new(
 )
 
 file = URI.open("https://static.thehoneycombers.com/wp-content/uploads/sites/4/2014/06/The-Practice-Yoga-Studio-Canggu-Bali-2.jpg")
-  yoga_studio5.photos.attach(io: file, filename: "#{yoga_studio5.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio5.photos.attach(io: file, filename: "#{yoga_studio5.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://www.uniqueretreats.com/wp-content/uploads/2018/04/radiantly-alive.jpg")
-  yoga_studio5.photos.attach(io: file, filename: "#{yoga_studio5.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio5.photos.attach(io: file, filename: "#{yoga_studio5.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://balipedia.com/wp-content/uploads/2020/12/The-Practice.jpg")
-  yoga_studio5.photos.attach(io: file, filename: "#{yoga_studio5.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio5.photos.attach(io: file, filename: "#{yoga_studio5.name}#{rand(1..100)}.png", content_type: "image/png")
 
 
 yoga_studio5.save!
@@ -144,11 +144,11 @@ yoga_studio6 = YogaStudio.new(
 )
 
 file = URI.open("https://assets.website-files.com/5f7533fe3ad0a039ce5f1006/61e5bdcb3a533b35dc58292d_sol-yoga-fullres-4%20(1).jpg")
-  yoga_studio6.photos.attach(io: file, filename: "#{yoga_studio6.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio6.photos.attach(io: file, filename: "#{yoga_studio6.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://assets.website-files.com/5f7533fe3ad0a039ce5f1006/5f81cf31a156d57dc408dda6_AzUvKS-U.jpeg")
-  yoga_studio6.photos.attach(io: file, filename: "#{yoga_studio6.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio6.photos.attach(io: file, filename: "#{yoga_studio6.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("http://solyogaflorida.com/wp-content/uploads/2018/05/studio-hero-v2.jpg")
-  yoga_studio6.photos.attach(io: file, filename: "#{yoga_studio6.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio6.photos.attach(io: file, filename: "#{yoga_studio6.name}#{rand(1..100)}.png", content_type: "image/png")
 
 yoga_studio6.save!
 
@@ -162,11 +162,11 @@ yoga_studio7 = YogaStudio.new(
 )
 
 file = URI.open("https://prajnayoga.com/wp-content/uploads/2022/08/prajna-studio-1518x1502.jpg")
-  yoga_studio7.photos.attach(io: file, filename: "#{yoga_studio7.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio7.photos.attach(io: file, filename: "#{yoga_studio7.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://cdn.fs.teachablecdn.com/Wd72lSsvRFKD93jp4fUC")
-  yoga_studio7.photos.attach(io: file, filename: "#{yoga_studio7.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio7.photos.attach(io: file, filename: "#{yoga_studio7.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://prajnayoga.com/wp-content/uploads/2020/04/20181028_Anatomy_Of_The_Vayus_DSC0254-1-scaled-1.jpg")
-  yoga_studio7.photos.attach(io: file, filename: "#{yoga_studio7.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio7.photos.attach(io: file, filename: "#{yoga_studio7.name}#{rand(1..100)}.png", content_type: "image/png")
 
 
 yoga_studio7.save!
@@ -182,11 +182,11 @@ yoga_studio8 = YogaStudio.new(
 )
 
 file = URI.open("https://concreteplayground.com/content/uploads/2017/07/Yoga213-image_simonshiffphotographer.jpg")
-  yoga_studio8.photos.attach(io: file, filename: "#{yoga_studio8.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio8.photos.attach(io: file, filename: "#{yoga_studio8.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://cdn.concreteplayground.com/content/uploads/2015/11/Yoga-213-Hip-Hop-Richmond-Melbourne-01-1920x1080.jpeg")
-  yoga_studio8.photos.attach(io: file, filename: "#{yoga_studio8.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio8.photos.attach(io: file, filename: "#{yoga_studio8.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("http://amodernwayfarer.files.wordpress.com/2013/05/yoga-123-4.jpg")
-  yoga_studio8.photos.attach(io: file, filename: "#{yoga_studio8.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio8.photos.attach(io: file, filename: "#{yoga_studio8.name}#{rand(1..100)}.png", content_type: "image/png")
 
 yoga_studio8.save!
 
@@ -201,11 +201,11 @@ yoga_studio9 = YogaStudio.new(
 )
 
 file = URI.open("https://img.theculturetrip.com/wp-content/uploads/2017/04/003-133_bear.jpg")
-  yoga_studio9.photos.attach(io: file, filename: "#{yoga_studio9.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio9.photos.attach(io: file, filename: "#{yoga_studio9.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/ec/f0/e6/surf-spirit.jpg?w=1400&h=-1&s=1")
-  yoga_studio9.photos.attach(io: file, filename: "#{yoga_studio9.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio9.photos.attach(io: file, filename: "#{yoga_studio9.name}#{rand(1..100)}.png", content_type: "image/png")
 file = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/ec/f1/41/surf-spirit.jpg?w=1100&h=-1&s=1")
-  yoga_studio9.photos.attach(io: file, filename: "#{yoga_studio9.name}#{rand(1..100)}.png", content_type: "image/png")
+yoga_studio9.photos.attach(io: file, filename: "#{yoga_studio9.name}#{rand(1..100)}.png", content_type: "image/png")
 
 yoga_studio9.save!
 

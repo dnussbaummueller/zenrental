@@ -59,7 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_100308) do
     t.bigint "yoga_studio_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "rating"
+    t.integer "rating", default: 0
     t.index ["yoga_studio_id"], name: "index_reviews_on_yoga_studio_id"
   end
 

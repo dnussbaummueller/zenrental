@@ -13,11 +13,11 @@
 }
 
 .btn-flat {
-  color: $first-color !important;
+  color: $third-color !important;
   padding: 8px 24px !important;
   border-radius: 20px !important;
   background:none !important;
-  border: solid $first-color 1px !important;
+  border: solid $third-color 1px !important;
   transition: background 0.3s ease !important;
   font-family:$body-font !important;
   font-size:small !important;
@@ -28,12 +28,12 @@
  }
 
 .btn-login {
-  color:white;
+  color: white;
   padding: 8px 30px;
   margin: 1px;
   border-radius: 20px;
   background: none;
-  border: solid white 1px;
+  border: solid  white 1px;
   transition: background 0.3s ease;
   font-family:$body-font;
   font-size:small;
@@ -46,7 +46,7 @@
 }
 
 .btn-login:hover {
-  background:$first-color;
+  background:$third-color;
   color:$fourth-color;
   border: none;
   box-shadow: 1cap;
