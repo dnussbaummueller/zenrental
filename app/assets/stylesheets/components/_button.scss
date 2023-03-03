@@ -128,3 +128,23 @@
     float: left;
   }
 }
+
+.home-btn {
+	background-color:#dbe6c4;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#757d6f;
+	font-size:18px;
+	font-weight:bold;
+	padding:12px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ced9bf;
+}
+.home-btn:hover {
+	background-color:#9ba892;
+}
+.home-btn:active {
+	position:relative;
+	top:1px;
+}
