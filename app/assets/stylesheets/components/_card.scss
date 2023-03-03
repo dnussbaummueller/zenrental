@@ -49,7 +49,7 @@
 
 .card-product:hover {
   // box-shadow: 8px 12px 31px #515151;
-  transform: scale(1.05);
+  transform: scale(1.05) !important;
 
 }
 .card-product:hover li{
