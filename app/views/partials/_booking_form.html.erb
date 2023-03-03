@@ -2,5 +2,5 @@
   <%= f.input :checkin_date, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
   <%= f.input :checkout_date, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
   <%= f.input :yoga_studio_id, as: :hidden, input_html: { value: @yoga_studio.id } %>
-  <%= f.submit class: "btn btn-primary", value: "Confirm Booking" %>
+  <%= f.submit class: "btn btn-flat", value: "Confirm Booking" %>
 <% end %>
