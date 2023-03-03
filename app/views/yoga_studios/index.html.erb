@@ -1,17 +1,19 @@
 <div class="container d-flex flex-direction-column space-between-around">
     <div class="col">
-      <div class=" d-flex" id="padding">
+      <div class=" d-flex">
         <div class="cards float-end p-1 m-3 flex-grow-1">
           <% @yoga_studios.each do |yoga_studio| %>
-            <div class="card-product shadow-sm rounded-4">
+            <div class="card-product shadow-sm rounded-4" data-aos="zoom-in">
                 <%= link_to yoga_studio do %>
                   <%= cl_image_tag yoga_studio.photos[0].key, width:400,height:400, crop: :fill %>
                 <% end%>
                 <div class="card-product-infos float-md-start">
                   <ul class="list-group list-group-flush p-1">
-                    <li class="list-group-item p-1"> <strong><%= yoga_studio.name %></strong></li>
-                    <li class="list-group-item p-1">Price: <strong><%= yoga_studio.price_per_hour %> </strong> <i class="fa-solid fa-euro-sign"></i></li>
-                    <li class="list-group-item p-1"><i class="fa-solid fa-location-dot"></i> Studio address <strong> <br> <%= yoga_studio.address %> </strong></li>
+                    <li class="list-group-item p-1"> <h6><strong><%= yoga_studio.name %></strong></h4></li>
+                    <li class="list-group-item p-1"><i class="fa-solid fa-tag"></i> <strong><%= yoga_studio.price_per_hour %> </strong>€ per hour</li>
+                    <li class="list-group-item p-1"><i class="fa-solid fa-house"></i> <strong><%= yoga_studio.size_in_m2 %> </strong>m²</li>
+                    <li class="list-group-item p-1"><i class="fa-solid fa-location-dot"></i><strong> <%= yoga_studio.address %> </strong></li>
+                    <li class="list-group-item p-1"><%= render 'partials/average_rating', yoga_studio: yoga_studio %> </li>
                   </ul>
                 </div>
             </div>
@@ -20,7 +22,7 @@
       </div>
     </div>
     <div class="col m-5">
-       <div style="width: 50%; height:70%; padding: 5px; rounded-2; margin: 20px; position:fixed; top:85px; right: 20px; bottom:32px;"
+       <div style="width: 50%; height:100vh; position:fixed; top: 80px;"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
