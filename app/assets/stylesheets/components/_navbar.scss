@@ -1,6 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: $fourth-color;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,6 +17,10 @@
 }
 
 .navbar-font{
-  font-family:'Anton', sans-serif;
-  font-size: large;
+  font-family:$headers-font;
+  font-size: 25px;
+}
+
+.navbar-font-color{
+  color: white;
 }

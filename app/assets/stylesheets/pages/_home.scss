@@ -1,3 +1,21 @@
 // Specific CSS for your home-page
 
 @import "bootstrap/scss/bootstrap";
+
+.btn-login-home {
+  color:white;
+  padding: 8px 30px;
+  margin: 1px;
+  border-radius: 20px;
+  background: none;
+  border: solid white 1px;
+  transition: background 0.3s ease;
+  font-family:$body-font;
+  font-size:small;
+  position: absolute;
+  right: 5%;
+}
+
+.search-form-control .btn i {
+  margin-left: -60px;
+}

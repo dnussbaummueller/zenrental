@@ -2,9 +2,8 @@
   border: 1px solid rgb(221, 221, 221);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
   border-radius: 12px;
-  padding: 24px;
+  padding: 20px;
   background-color: white;
-  margin-top: 15px;
   margin-bottom: 15px;
 }
 
@@ -16,4 +15,5 @@
 
 .info-card {
   flex-grow: 1;
+  max-width: 75%;
 }

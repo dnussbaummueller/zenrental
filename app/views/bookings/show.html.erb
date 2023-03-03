@@ -1,0 +1,13 @@
+<div class="my-card mt-3">
+
+  <h2 class="border-bottom pb-3 mb-3"><i class="fa-regular fa-calendar-check"></i><strong> Your booking was successful. Waiting for approval.</strong> </h2>
+  <div class="yoga-studio-infos border-bottom pb-3 mb-3">
+    <h3> <%= @booking.yoga_studio.name %></h3>
+    <p><i class="fa-regular fa-calendar"></i> <%= @booking.checkin_date %> until <%= @booking.checkout_date %></p>
+    <p><i class="fa-solid fa-circle-info"></i>  <%= @booking.yoga_studio.description %></p>
+    <p><i class="fa-solid fa-location-dot"></i> <%= @booking.yoga_studio.address %></p>
+    <p><i class="fa-solid fa-tag"></i>  <%= @booking.yoga_studio.price_per_hour %>€ per hour</p>
+    <p><i class="fa-solid fa-house"></i>  <%= @booking.yoga_studio.size_in_m2 %> m²</p>
+  </div>
+  <h4><strong>Total: <%= ((@booking.checkout_date - @booking.checkin_date)/60/60)*@booking.yoga_studio.price_per_hour %>€</strong></h5>
+</div>

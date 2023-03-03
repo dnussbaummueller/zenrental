@@ -1,0 +1,9 @@
+<% sum = 0 %>
+<% yoga_studio.reviews.each do |review| %>
+  <% sum += review.rating %>
+<% end %>
+<% if yoga_studio.reviews.size > 0 %>
+  <%= render 'partials/star_rating', star_rating: (sum / yoga_studio.reviews.size).round %>
+<% else %>
+  <%= render 'partials/star_rating', star_rating: 0 %>
+<% end %>

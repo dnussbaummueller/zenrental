@@ -12,13 +12,15 @@ class YogaStudiosController < ApplicationController
     @markers = @yoga_studios.geocoded.map do |yoga_studio|
       {
         lat: yoga_studio.latitude,
-        lng: yoga_studio.longitude
+        lng: yoga_studio.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {yoga_studio: yoga_studio})
       }
     end
   end
 
   def show
     @booking = Booking.new
+    @review = Review.new
   end
 
   def new
@@ -44,7 +46,11 @@ class YogaStudiosController < ApplicationController
 
   def destroy
     @yoga_studio.destroy
-    redirect_to yoga_studios_path
+    redirect_to admin_path
+  end
+
+  def admin
+    @yoga_studios = YogaStudio.where(user: current_user)
   end
 
   private

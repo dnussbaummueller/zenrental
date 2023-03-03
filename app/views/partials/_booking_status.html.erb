@@ -1,0 +1,7 @@
+<% if booking.booking_status == 'pending' %>
+      <p class="booking-status" style="background-color: orange;"><i class="fa-solid fa-hourglass-half"></i></p>
+    <% elsif booking.booking_status == 'accepted' %>
+      <p class="booking-status" style="background-color: green"><i class="fa-solid fa-circle-check"></i></p>
+    <% elsif booking.booking_status == 'rejected' %>
+      <p class="booking-status" style="background-color: red"><i class="fa-solid fa-circle-xmark"></i></p>
+    <% end %>

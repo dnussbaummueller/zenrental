@@ -1,5 +1,14 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :destroy, :update]
+  before_action :set_booking, only: [:show, :destroy, :update, :accept, :reject]
+
+  def index
+    if current_user.yoga_studios.any?
+      yoga_studio_ids = current_user.yoga_studios.pluck(:id)
+      @bookings = Booking.where(yoga_studio_id: yoga_studio_ids)
+    else
+      @bookings = Booking.where(user: current_user)
+    end
+  end
 
   def show; end
 
@@ -23,6 +32,16 @@ class BookingsController < ApplicationController
   def update
     @booking.update(booking_params)
     redirect_to booking_path(@booking)
+  end
+
+  def accept
+    @booking.update(booking_status: 'accepted')
+    redirect_to bookings_path
+  end
+
+  def reject
+    @booking.update(booking_status: 'rejected')
+    redirect_to bookings_path
   end
 
   private
