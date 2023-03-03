@@ -16,12 +16,6 @@
     </div>
     <p class="info-text mt-3"><%= @yoga_studio.description %></p>
 
-    <% if current_user == @yoga_studio.user %>
-      <%= link_to "Edit", edit_yoga_studio_path, class: "btn btn-edit" %>
-      <%= render "yoga_studios/destroy", yoga_studio: @yoga_studio %>
-
-    <% end %>
-
   </div>
 
   <%# Booking Card: %>
