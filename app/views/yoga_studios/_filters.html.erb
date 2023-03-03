@@ -5,15 +5,46 @@
     </button>
   </p>
   <div class="collapse" id="collapseExample" data-button-target="expend">
-    <div class="card card-body">
-      <div class="d-inline filter">
-        <label for="customRange2" class="form-label">Price range</label>
-        <input type="range" class="form-range" min="0" max="100" id="customRange2">
+    <form action="post">
+      <div class="filter_items">
+        <div class="filter_item">
+          <p  class="filter_title">Price range</p>
+          <div class="price_input" data-role="rangeslider">
+            <div class="field">
+              <span>Min</span>
+              <input type="number" class="input_min" value="10">
+            </div>
+            <div class="separator">-</div>
+            <div class="field">
+              <span>Max</span>
+              <input type="number" class="input_max" value="200">
+            </div>
+          </div>
+          <div class="slider">
+            <div class="progress"></div>
+          </div>
+          <div class="range_input">
+            <input type="range" class="range-min" min="10" max="200" value="50">
+            <input type="range" class="range-max" min="10" max="200" value="150">
+          </div>
+        </div>
+      <%#   <div class="filter_item">
+          <div class="price_input" data-role="rangeslider">
+            <div class="field">
+              <span>Min</span>
+              <input type="number" class="input_min" value="10">
+            </div>
+            <div class="separator">-</div>
+            <div class="field">
+              <span>Max</span>
+              <input type="number" class="input_max" value="200">
+            </div>
+          </div>
+          <div class="slider">
+            <div class="progress"></div>
+          </div>
+        </div> %>
       </div>
-      <div class="d-inline filter">
-        <label for="customRange2" class="form-label">Room's area range</label>
-        <input type="range" class="form-range" min="10" max="200" id="customRange2">
-      </div>
-    </div>
+    </form>
   </div>
 </div>
