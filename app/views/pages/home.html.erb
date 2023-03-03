@@ -1,28 +1,17 @@
  <br>
- <p><%= link_to "Login", new_user_session_path, class: "text-decoration-none m-1 btn-login-home" %> </p>
- <div class="hero px-4 text-center text-light mb-3">
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <h1 class="display-5 fw-bold pt-5">
-     <p>
-     <p></p>
-     </p>Find Your Perfect Practice Space
+ <%= link_to "Login", new_user_session_path, class: "text-decoration-none m-1 btn-login-home btn-login", style: "top: 22px;" %>
+ <div class="hero px-4 text-center text-light mb-3" style="margin-top: 14%;">
+     <div style="z-index: -1; background-color: rgba(0,0,0,0.7); width: 100vw; height: 100vh; position: absolute; top: 0px; left:0px;"></div>
+   <h1 class="display-5 fw-bold pt-5 mb-5">
+     Find Your Perfect Practice Space
    </h1>
-   <br>
-   <br>
    <div class="col-lg-6 mx-auto">
-     <img src="https://images.unsplash.com/photo-1593810451137-5dc55105dace?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80" alt="" style='position: absolute; left: 0px; z-index: -1; top: 0px; height: 100vh; width: 100vw;'>
+     <img src="https://wallpapercave.com/wp/wp3157183.jpg" alt="" style='position: absolute; left: 0px; z-index: -1; top: 0px; height: 100vh; width: 100vw; z-index: -2;'>
 <div class="search-form-control form-group d-flex justify-content-center">
-  <div class="col-8">
-    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="col-12">
+    <%= simple_form_for :search, url: yoga_studios_path, method: :get do |f| %>
       <div class="input-group">
-        <input class="form-control shadow-sm rounded-pill search-font" placeholder="Search for yoga studios" type="text" name="search[query]" id="search_query" />
+        <input class="form-control string required shadow-sm pl-5  rounded-pill search-font"  placeholder="Search for yoga studios" type="text" name="search[query]" id="search_query" />
         <button name="button" type="submit" class="btn">
           <i class="fas fa-search" style="display: block; margin-top: -15px;"></i>
         </button>
@@ -32,54 +21,36 @@
 </div>
  </div>
  <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <h2 style="color: black; text-align: left;"> Most popular studios</h2>
- <br>
  </div>
+
+     </div>
+   </div>
+  <div class="most-popular mb-5" style="margin-top: -60px;">
+ <h2 class="text-center mb-5" style="color: black; text-align: left;"> Most popular studios</h2>
  <div class="container text-center mb-3">
    <div class="row row-cols-1 row-cols-md-3 g-4">
      <div class="col">
        <div class="card-product shadow-sm rounded-4"><%= cl_image_tag @yoga_studios[0].photos.first.key, height: 300, width: 416, crop: :fill %> <div class="card-body">
-           <h5 class="card-title"><%= @yoga_studios[0].name %> </h5>
-           <p class="card-text"><%= @yoga_studios[0].address %> </p>
-           <p class="card-text"><%= @yoga_studios[0].size_in_m2 %>m2 </p>
-           <br>
-           <p><%= link_to "Book",  yoga_studio_path(@yoga_studios[0]), class: "btn-flat text-decoration-none" %> </p>
+           <h5 class="card-title" style="margin-bottom: 40px;"><%= @yoga_studios[0].name %> </h5>
+           <%= link_to "Book",  yoga_studio_path(@yoga_studios[0]), class: "btn-flat text-decoration-none", style: "padding-left: 40px !important; padding-right: 40px !important;" %>
          </div>
        </div>
      </div>
      <div class="col">
        <div class="card-product shadow-sm rounded-4"><%= cl_image_tag @yoga_studios[1].photos.first.key, height: 300, width: 416, crop: :fill %> <div class="card-body">
-           <h5 class="card-title"><%= @yoga_studios[1].name %> </h5>
-           <p class="card-text"><%= @yoga_studios[1].address %> </p>
-           <p class="card-text"><%= @yoga_studios[1].size_in_m2 %>m2 </p>
-           <br>
-           <p><%= link_to "Book",  yoga_studio_path(@yoga_studios[1]), class: "btn-flat text-decoration-none" %> </p>
+           <h5 class="card-title" style="margin-bottom: 40px;"><%= @yoga_studios[1].name %> </h5>
+
+           <%= link_to "Book",  yoga_studio_path(@yoga_studios[1]), class: "btn-flat text-decoration-none", style: "padding-left: 40px !important; padding-right: 40px !important;" %>
          </div>
        </div>
      </div>
      <div class="col">
        <div class="card-product shadow-sm rounded-4"><%= cl_image_tag @yoga_studios[2].photos.first.key, height: 300, width: 416, crop: :fill %> <div class="card-body">
-           <h5 class="card-title"><%= @yoga_studios[2].name %> </h5>
-           <p class="card-text"><%= @yoga_studios[2].address %> </p>
-           <p class="card-text"><%= @yoga_studios[2].size_in_m2 %>m2 </p>
-           <br>
-           <p><%= link_to "Book",  yoga_studio_path(@yoga_studios[2]), class: "btn-flat text-decoration-none" %> </p>
+           <h5 class="card-title" style="margin-bottom: 40px;"><%= @yoga_studios[2].name %> </h5>
+
+           <%= link_to "Book",  yoga_studio_path(@yoga_studios[2]), class: "btn-flat text-decoration-none", style: "padding-left: 40px !important; padding-right: 40px !important;" %>
          </div>
        </div>
-     </div>
-   </div>
-   <br>
-   <br>
+
+    </div>
  </div>
